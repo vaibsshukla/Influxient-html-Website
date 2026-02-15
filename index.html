@@ -14,15 +14,91 @@
   <!-- Navigation -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="#" class="logo">InFluxient</a>
+      <a href="index.html" class="logo">InFluxient</a>
       <nav class="nav" aria-label="Main">
         <ul class="nav-list">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#expertise">Expertise</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="ai-development-services.html" class="nav-link">InFluxient Labs <span class="nav-chevron" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <div class="dropdown" aria-hidden="true">
+              <div class="dropdown-inner">
+                <div class="dropdown-col">
+                  <a href="ai-development-services.html">AI Development Services</a>
+                  <a href="ai-development-services.html#capabilities">Explore AI Tech Solutions</a>
+                  <a href="ai-development-services.html#services">AI Knowledge Hub</a>
+                </div>
+                <div class="dropdown-featured">
+                  <p class="dropdown-featured-title">Featured</p>
+                  <p class="dropdown-featured-text">See what's possible when AI empowers your enterprise.</p>
+                  <a href="#" class="link-arrow" style="margin-top:0.5rem;" data-modal-open="consult">Let's Discuss AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#services" class="nav-link">Services <span class="nav-chevron" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <div class="dropdown" aria-hidden="true">
+              <div class="dropdown-inner">
+                <div class="dropdown-col">
+                  <a href="#services">Strategic Consulting</a>
+                  <a href="#services">Product Engineering</a>
+                  <a href="ai-development-services.html">AI & Data Solutions</a>
+                  <a href="#services">Cloud & Cybersecurity</a>
+                </div>
+                <div class="dropdown-featured">
+                  <p class="dropdown-featured-title">Featured</p>
+                  <p class="dropdown-featured-text">Beyond development. We deliver transformation.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#about" class="nav-link">About <span class="nav-chevron" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <div class="dropdown" aria-hidden="true">
+              <div class="dropdown-inner">
+                <div class="dropdown-col">
+                  <a href="#about">About InFluxient</a>
+                  <a href="#about">Our Core Team</a>
+                  <a href="#about">How We Work</a>
+                  <a href="#work">Client Portfolio</a>
+                  <a href="#testimonials">Client Testimonials</a>
+                  <a href="#about">Careers</a>
+                  <a href="#about">Awards</a>
+                </div>
+                <div class="dropdown-featured">
+                  <p class="dropdown-featured-title">Featured Insight</p>
+                  <div class="dropdown-featured-card">Deloitte Technology Fast 50 — InFluxient recognized for growth.</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#industries" class="nav-link">Industries <span class="nav-chevron" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <div class="dropdown" aria-hidden="true">
+              <div class="dropdown-inner">
+                <div class="dropdown-col">
+                  <a href="#industries">Healthcare</a>
+                  <a href="#industries">FinTech</a>
+                  <a href="#industries">eCommerce</a>
+                  <a href="#industries">Logistics</a>
+                  <a href="#industries">Manufacturing</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#work" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#faq" class="nav-link">Resources <span class="nav-chevron" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <div class="dropdown" aria-hidden="true">
+              <div class="dropdown-inner">
+                <div class="dropdown-col">
+                  <a href="#faq">FAQ</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
       <a href="#" class="btn btn-primary" data-modal-open="consult" aria-haspopup="dialog">Consult Our Team</a>
@@ -49,8 +125,8 @@
       </div>
     </section>
 
-    <!-- Trust badges -->
-    <section class="trust">
+    <!-- Trust badges / About -->
+    <section class="trust" id="about">
       <div class="container">
         <p class="trust-label">Recognized for excellence</p>
         <div class="trust-logos">
@@ -379,23 +455,23 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">InFluxient</a>
+          <a href="index.html" class="logo">InFluxient</a>
           <p>Digital product consulting, development, and engineering.</p>
         </div>
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#about">Careers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Services</h4>
           <ul>
-            <li><a href="#services">Consulting</a></li>
-            <li><a href="#services">Product Engineering</a></li>
-            <li><a href="#services">AI & Data</a></li>
+            <li><a href="index.html#services">Consulting</a></li>
+            <li><a href="index.html#services">Product Engineering</a></li>
+            <li><a href="ai-development-services.html">AI & Data</a></li>
           </ul>
         </div>
         <div class="footer-links">
