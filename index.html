@@ -25,7 +25,7 @@
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
-      <a href="#contact" class="btn btn-primary">Consult Our Team</a>
+      <a href="#" class="btn btn-primary" data-modal-open="consult" aria-haspopup="dialog">Consult Our Team</a>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -41,7 +41,7 @@
         <p class="hero-label">Digital Engineering services</p>
         <h1 class="hero-title">Engineering the Next Generation of Digital Systems with AI</h1>
         <p class="hero-desc">InFluxient engineers secure, scalable digital systems by combining strong architecture, data engineering, and AI capabilities, helping organizations move from strategy to reliable systems in production.</p>
-        <a href="#contact" class="btn btn-primary btn-lg">Consult Our Strategy Team</a>
+        <a href="#" class="btn btn-primary btn-lg" data-modal-open="consult" aria-haspopup="dialog">Consult Our Strategy Team</a>
       </div>
       <div class="hero-scroll">
         <span>Scroll</span>
@@ -411,6 +411,64 @@
       </div>
     </div>
   </footer>
+
+  <!-- Consult modal -->
+  <div id="consult-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <button type="button" class="modal-close" aria-label="Close">×</button>
+      <div class="modal-inner">
+        <div class="modal-left">
+          <h2 id="consult-modal-title" class="modal-headline">Giving your <span class="modal-headline-accent">vision</span> a smooth transition to reality</h2>
+          <p class="modal-desc">By enabling an innovative digital experience that fulfills new-age demands.</p>
+          <div class="modal-visual">
+            <div class="modal-visual-placeholder">
+              <span class="modal-visual-logo">InFluxient</span>
+              <span class="modal-visual-hint">Your workspace, powered by InFluxient</span>
+            </div>
+          </div>
+          <ul class="modal-achievements">
+            <li>500+ transformation engineers delivered</li>
+            <li>1000+ game-changing products.</li>
+          </ul>
+          <div class="modal-awards">
+            <div class="modal-award"><span class="modal-award-badge">Award</span> App Development Company Of The Year</div>
+            <div class="modal-award"><span class="modal-award-badge">Tech Fast 50</span> 2023-24</div>
+            <div class="modal-award"><span class="modal-award-badge">Growth Champions</span> in IT</div>
+          </div>
+        </div>
+        <div class="modal-right">
+          <form class="modal-form" id="consult-form" novalidate>
+            <div class="form-row">
+              <label for="modal-name">Full name</label>
+              <input type="text" id="modal-name" name="name" required placeholder="Your full name" />
+            </div>
+            <div class="form-row">
+              <label for="modal-email">E-Mail ID <span class="required">*</span></label>
+              <input type="email" id="modal-email" name="email" required placeholder="you@company.com" />
+            </div>
+            <div class="form-row">
+              <label for="modal-phone">Contact Number <span class="required">*</span></label>
+              <input type="tel" id="modal-phone" name="phone" required placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-row">
+              <label for="modal-message">Describe Your Project/Idea In Brief (Helps Us Come Back Better Prepared)</label>
+              <textarea id="modal-message" name="message" rows="4" placeholder="Tell us about your project"></textarea>
+            </div>
+            <div class="form-row form-row-captcha">
+              <label for="modal-captcha">4 + 4 = <span class="required">*</span></label>
+              <input type="text" id="modal-captcha" name="captcha" inputmode="numeric" pattern="[0-9]*" maxlength="2" required placeholder="?" autocomplete="off" />
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-modal-submit">Submit</button>
+            <ul class="modal-disclaimers">
+              <li>In just <strong>2 mins</strong> you will get a response</li>
+              <li>Your idea is 100% protected by our <strong>Non Disclosure Agreement.</strong></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
