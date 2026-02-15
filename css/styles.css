@@ -5,8 +5,8 @@
   --bg-card: #131b2e;
   --text: #e2e8f0;
   --text-muted: #94a3b8;
-  --accent: #f59e0b;
-  --accent-soft: rgba(245, 158, 11, 0.15);
+  --accent: #92D400;
+  --accent-soft: rgba(146, 212, 0, 0.15);
   --accent-secondary: #06b6d4;
   --border: rgba(148, 163, 184, 0.12);
   --font-head: 'Outfit', sans-serif;
@@ -123,8 +123,8 @@ body {
 }
 
 .btn-primary:hover {
-  background: #fbbf24;
-  box-shadow: 0 0 24px rgba(245, 158, 11, 0.35);
+  background: #a8e600;
+  box-shadow: 0 0 24px rgba(146, 212, 0, 0.35);
 }
 
 .btn-outline {
@@ -302,7 +302,7 @@ body {
 }
 
 .service-card:hover {
-  border-color: rgba(245, 158, 11, 0.3);
+  border-color: rgba(146, 212, 0, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -508,7 +508,7 @@ body {
 }
 
 .work-card:hover {
-  border-color: rgba(245, 158, 11, 0.3);
+  border-color: rgba(146, 212, 0, 0.3);
 }
 
 .work-card-inner {
@@ -637,7 +637,7 @@ body {
 }
 
 .expertise-card:hover {
-  border-color: rgba(245, 158, 11, 0.25);
+  border-color: rgba(146, 212, 0, 0.25);
 }
 
 .expertise-card h3 {
