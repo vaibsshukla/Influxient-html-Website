@@ -34,8 +34,51 @@
     if (nav.classList.contains('is-open')) closeMenu();
     else openMenu();
   });
-  navOverlay.addEventListener('click', closeMenu);
-  nav.querySelectorAll('a').forEach(function (a) {
+  navOverlay.addEventListener('click', function () {
+    closeMenu();
+    closeAllDropdowns();
+  });
+
+  // Dropdown: click to toggle, close others, close on outside click
+  function closeAllDropdowns() {
+    nav.querySelectorAll('.nav-item.is-open').forEach(function (item) {
+      item.classList.remove('is-open');
+      item.querySelector('.dropdown')?.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  nav.querySelectorAll('.nav-item.has-dropdown').forEach(function (item) {
+    const link = item.querySelector('.nav-link');
+    const dropdown = item.querySelector('.dropdown');
+    if (!link || !dropdown) return;
+
+    link.addEventListener('click', function (e) {
+      if (window.matchMedia('(max-width: 900px)').matches) {
+        e.preventDefault();
+        item.classList.toggle('is-open');
+        dropdown.setAttribute('aria-hidden', item.classList.contains('is-open') ? 'false' : 'true');
+      }
+    });
+  });
+
+  // Close dropdown when clicking a dropdown link (navigate)
+  nav.querySelectorAll('.dropdown-col a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      closeAllDropdowns();
+      closeMenu();
+    });
+  });
+
+  // Desktop: close dropdown when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!nav.contains(e.target) && !e.target.closest('.dropdown')) {
+      closeAllDropdowns();
+    }
+  });
+
+  // Keep mobile nav links without dropdown closing the whole menu (they navigate)
+  nav.querySelectorAll('.nav-link').forEach(function (a) {
+    if (a.closest('.nav-item.has-dropdown')) return;
     a.addEventListener('click', closeMenu);
   });
 
