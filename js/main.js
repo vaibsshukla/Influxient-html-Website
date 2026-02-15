@@ -108,6 +108,64 @@
     }, { passive: true });
   }
 
+  // Consult modal
+  const consultModal = document.getElementById('consult-modal');
+  const consultForm = document.getElementById('consult-form');
+  const modalCaptcha = document.getElementById('modal-captcha');
+
+  function openConsultModal() {
+    if (!consultModal) return;
+    consultModal.classList.add('is-open');
+    consultModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    consultModal.querySelector('input, textarea')?.focus();
+  }
+
+  function closeConsultModal() {
+    if (!consultModal) return;
+    consultModal.classList.remove('is-open');
+    consultModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-modal-open="consult"]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      closeMenu();
+      openConsultModal();
+    });
+  });
+
+  if (consultModal) {
+    consultModal.querySelector('.modal-close').addEventListener('click', closeConsultModal);
+    consultModal.querySelector('.modal-backdrop').addEventListener('click', closeConsultModal);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && consultModal.classList.contains('is-open')) {
+        closeConsultModal();
+      }
+    });
+  }
+
+  if (consultForm) {
+    consultForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const captchaVal = modalCaptcha ? modalCaptcha.value.trim() : '';
+      if (captchaVal !== '8') {
+        if (modalCaptcha) {
+          modalCaptcha.focus();
+          modalCaptcha.setCustomValidity('Please enter the correct answer (4 + 4 = 8).');
+          modalCaptcha.reportValidity();
+        }
+        return;
+      }
+      if (modalCaptcha) modalCaptcha.setCustomValidity('');
+      // Replace with your submit logic (e.g. send to backend)
+      alert('Thank you. Our team will get back to you within 2 minutes.');
+      closeConsultModal();
+      consultForm.reset();
+    });
+  }
+
   // Contact form
   const form = document.querySelector('.contact-form');
   if (form) {
