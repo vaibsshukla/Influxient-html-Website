@@ -174,9 +174,9 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, var(--accent-soft), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(6, 182, 212, 0.08), transparent 50%),
-    var(--bg);
+    linear-gradient(180deg, rgba(8, 12, 20, 0.75) 0%, rgba(8, 12, 20, 0.6) 50%, rgba(8, 12, 20, 0.85) 100%),
+    linear-gradient(rgba(8, 12, 20, 0.1), rgba(8, 12, 20, 0.1)),
+    url('../assets/hero-bg.png') center / cover no-repeat;
 }
 
 .hero-inner {
